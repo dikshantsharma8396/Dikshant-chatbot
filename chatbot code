@@ -3,15 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dikshant Chatbot</title>
+  <title>Your Name Chatbot</title>               <!--enter your name in title-->
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
-      background-image:url('https://media.gettyimages.com/id/1458826985/video/technology-and-chatbot-robot-icons-background-endless-animation.jpg?s=640x640&k=20&c=FMsriEuSAcgsRUiN2j1j3yR4nrDjwq7ojcJ3E1dF89I='); 
-      
     }
     .chat-container {
       max-width: 600px;
@@ -61,14 +59,14 @@
 </head>
 <body>
   <div class="chat-container">
-    <h1>Dikshant Chatbot</h1>
+    <h1>DIKSHANT Chatbot</h1>                         <!--enter the name of your chatbot-->
     <div class="chat-box" id="chat-box"></div>
     <textarea id="user-input" placeholder="Enter your Query..."></textarea>
     <button onclick="sendMessage()">Send</button>
   </div>
 
   <script>
-    const API_KEY = "AIzaSyBXKN3w3XAAbjzzYrOo-0gnQGvEGFk-U4I"; // Replace with your actual Gemini API key
+    const API_KEY = "Your-API-Key"; // Replace with your actual Gemini API key
     const chatBox = document.getElementById("chat-box");
     const userInput = document.getElementById("user-input");
 
@@ -96,9 +94,9 @@
 
         const data = await response.json();
         const reply = data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response received.";
-        appendMessage("Dikshant", reply);
+        appendMessage("Dikshant", reply);              <!--enter your chatbot name--> 
       } catch (error) {
-        appendMessage("Dikshant", "Error: " + error.message);
+        appendMessage("Dikshant", "Error: " + error.message);      <!--enter your chatbot name-->
       }
     }
 
